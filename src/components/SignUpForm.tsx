@@ -1,20 +1,48 @@
-import { type FormEvent, useState } from 'react';
+"use client";
+
+import { type FormEvent, useState } from "react";
 
 export interface SignUpFormProps {
   submitLabel?: string;
   onSubmit?: (data: { name: string; email: string }) => void;
 }
 
+type SubmitStatus = "idle" | "loading" | "success" | "error";
+
 export function SignUpForm({
-  submitLabel = 'SEND MY PREVIEW NOW',
+  submitLabel = "Send my preview now",
   onSubmit,
 }: SignUpFormProps) {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<SubmitStatus>("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     onSubmit?.({ name, email });
+
+    setStatus("loading");
+    setErrorMessage(null);
+
+    try {
+      const res = await fetch("/api/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name.trim(), email: email.trim() }),
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        setStatus("error");
+        setErrorMessage((data.error as string) || "Something went wrong.");
+        return;
+      }
+      setStatus("success");
+    } catch {
+      setStatus("error");
+      setErrorMessage("Network error. Please try again.");
+    }
   }
 
   return (
@@ -30,6 +58,7 @@ export function SignUpForm({
         onChange={(e) => setName(e.target.value)}
         placeholder="Name"
         autoComplete="name"
+        disabled={status === "loading"}
       />
       <label className="signup-form__label" htmlFor="signup-email">
         Email
@@ -43,10 +72,25 @@ export function SignUpForm({
         placeholder="Email"
         autoComplete="email"
         required
+        disabled={status === "loading"}
       />
-      <button type="submit" className="cta-button signup-form__submit">
-        {submitLabel}
+      <button
+        type="submit"
+        className="cta-button signup-form__submit"
+        disabled={status === "loading"}
+      >
+        {status === "loading" ? "Sending…" : submitLabel}
       </button>
+      {status === "success" && (
+        <p className="signup-form__message signup-form__message--success">
+          Thanks! Check your email for your preview.
+        </p>
+      )}
+      {status === "error" && errorMessage && (
+        <p className="signup-form__message signup-form__message--error">
+          {errorMessage}
+        </p>
+      )}
     </form>
   );
 }

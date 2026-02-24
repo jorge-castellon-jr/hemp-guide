@@ -277,6 +277,16 @@ body {
 .signup-form__submit {
   margin-top: 0.25rem;
 }
+.signup-form__message {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+}
+.signup-form__message--success {
+  color: var(--color-accent-green);
+}
+.signup-form__message--error {
+  color: var(--color-accent);
+}
 
 /* Social icons */
 .social-icons {
