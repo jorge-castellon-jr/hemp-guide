@@ -57,16 +57,25 @@ function App() {
               imageSrc={images.hemp}
               imageAlt="Raw hemp plant material, leaves and seeds"
             >
-              <p>Proven product demand for billions of dollars in growth.</p>
-              <p>Historic role as a mainstay of the American economy.</p>
-              <p>Sustainable product potential.</p>
-              <p>Current use in more than 25,000 products.</p>
               <p>
-                Ability to transform the agriculture, energy, medicine, food,
-                feed, and plastic industries.
+                There's a proven product poised for billions of dollars in
+                growth—and you can get in on the ground floor. <b>Industrial hemp</b>, now legal, is the
+                crop of the future, the savior of the economy, and your ticket to
+                wealth. Tap into this emerging industry with{" "}
+                <i>Marijuana Hater's Guide to Making a Billion Dollars from Hemp</i>{" "}
+                and discover hemp's:
               </p>
+              <p><strong>historic role as a mainstay of the American economy</strong></p>
               <p>
-                Matthew Harmon's Guide to Making a Billion Dollars from Hemp.
+                <strong>
+                  sustainable product potential to replace hundreds of non-renewable materials
+                </strong>
+              </p>
+              <p><strong>current use in more than 25,000 products</strong></p>
+              <p>
+                <strong>
+                  ability to transform the agriculture, energy, medicine, fuel, food, and plastic industries
+                </strong>
               </p>
             </HalfAndHalf>
           </div>
@@ -79,23 +88,31 @@ function App() {
               mobileVideoFirst
               heading="Documentary"
               videoSrc={videos.header}
-              ctaLabel="WATCH NOW >"
-              ctaHref="#"
+              ctaLabel="YouTube"
+              ctaHref="https://www.youtube.com/watch?v=F34n46Imzqo&t=47s"
             >
               <p>
-                The Farm Bill of 2018 opened the door to industrial production
-                of hemp. More than 30 states have now adopted programs that will
-                provide jobs, new recycling industries, and boost local
-                economies using this fast-growing, sustainable, environmentally
-                clean crop. The country is on the verge of a new agricultural
+                The Farm Bill of 2018 opened the door to industrial production of
+                Hemp. More than 30 states have adopted programs that will provide
+                jobs, replace dying industries, and boost local economies using
+                this fast growing, sustainable, ancient plant. The country, the
+                world, could be on the verge of a new clean industrial
                 revolution that could add billions of dollars to the economy.
               </p>
               <p>
-                We document our journey from Seed to Sale—from 6,000 years ago
-                to the most important agricultural commodity and impactful
-                financial crop in the world. By the start of World War II in the
-                1920s, discover all that America owes to hemp and stay tuned to
-                our YouTube channel for updates.
+                We trace hemp's journey from food and fiber in 6,000 years ago to
+                the most important national security commodity and largest
+                industrial crop in the world at the beginning of the 20th century
+                to the root of all evil in the 1930's. Advocates of Hemp world
+                wide, have been educating and lobbying to remove the stigma and
+                show the potential of this amazing resource.
+              </p>
+              <p>
+                Passage of the Farm Bill Act could be just the start of a whole
+                new industry that can deliver everything from food to energy,
+                medicine to building materials, and paper to plastics. Look for
+                release of this important new film later this year, and stay
+                tuned to our YouTube channel for updates.
               </p>
             </HalfAndHalfVideo>
           </div>
@@ -111,8 +128,7 @@ function App() {
               variant="green"
             >
               <p>
-                Farmbridge is dedicated to bridging the gap between Hemp and
-                Humanity.
+                Farmbridge is dedicated to bridging the gap between Hemp and Humans.
               </p>
             </CenteredCallToAction>
           </div>
@@ -125,24 +141,24 @@ function App() {
               heading="Matthew Harmon"
               imageSrc={images.matthew}
               imageAlt="Matthew Harmon, businessman and author"
-              ctaLabel="READ MORE >"
-              ctaHref="#"
+              ctaLabel="View press kit"
+              ctaHref="https://matthewharmon.onlinepresskit247.com/"
             >
               <p>
-                Matthew Harmon is changing the way of American industry and
-                economy through his role as a thought leader, business
-                consultant, speaker, and investor in the hemp industry. A
-                successful businessman, documentary filmmaker, and author of
-                "How to Make a Billion Dollars From Hemp," Matthew Harmon has
-                dedicated his life to creating a potential $1 trillion
-                industrial hemp economy that will benefit everyone and be
-                sustainable.
+                <b>Matthew Harmon</b> is changing the face of American industry
+                and our economy through his role as a thought leader, business
+                consultant, lobbyist, and investor guide to the hemp industry. A
+                successful businessman, documentary filmmaker, and author of{" "}
+                <i>Marijuana Hater's Guide to Making a Billion Dollars from Hemp</i>, Harmon
+                advocates for America to unshackle a potential $1 trillion
+                industrial hemp economy—to build a prosperous and sustainable
+                future.
               </p>
               <p>
-                Harmon is a seasoned real estate executive with a sharp eye for
-                viable commercial and retail businesses. When California
-                cannabis business opportunities increased, he leveraged his
-                experience to take advantage of market stakes.
+                Harmon is a seasoned real-estate executive with a sharp eye for
+                viable commercial and retail business ventures. When California
+                decriminalized cannabis, business opportunities increased as
+                prospective tenants took advantage of its new status.
               </p>
             </HalfAndHalf>
           </div>
@@ -154,7 +170,7 @@ function App() {
             <section className="half-and-half half-and-half--mobile-image-first half-and-half--signup">
               <div className="half-and-half__title-wrap">
                 <h2 className="half-and-half__heading">
-                  Sign up for a free preview
+                  Sign up for a <strong>free</strong> preview
                 </h2>
                 <div className="title-underline" aria-hidden="true" />
               </div>
