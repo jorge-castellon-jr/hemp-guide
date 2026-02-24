@@ -1,0 +1,318 @@
+:root {
+  --color-accent: #b0231f;
+  --color-accent-green: #2d5a27;
+  --color-text: #1a1a1a;
+  --color-text-muted: #444;
+  --max-width: 1200px;
+  --breakpoint-md: 768px;
+  --font-display: "Bodoni Moda", serif;
+  --font-heading: "Roboto", sans-serif;
+  --font-body: "Roboto", "Lato", sans-serif;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Page container: max-width for large desktops */
+.page-container {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+/* Thin red line under section titles (mockup) */
+.title-underline {
+  width: 100%;
+  max-width: 180px;
+  height: 0;
+  border-top: 1px solid var(--color-accent);
+  margin: 0.75rem auto 0;
+}
+
+/* Main heading (h1) – Bodoni Moda like original */
+.page-title {
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 400;
+  text-align: center;
+  margin: 40px 0 0;
+  line-height: 1.1;
+}
+
+/* Red line under main title */
+.page-title-wrap {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.page-title-wrap .title-underline {
+  margin-top: 1rem;
+}
+
+/* Shared CTA button / link */
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: opacity 0.2s;
+}
+.cta-button:hover {
+  opacity: 0.9;
+}
+
+/* Section background colors (from reference) */
+.section-bg-hero {
+  background: linear-gradient(180deg, #e8eae9 0%, #eff1f0 100%);
+}
+.section-bg-light {
+  background: linear-gradient(180deg, #e8eae9 0%, rgba(239, 241, 240, 0) 100%);
+}
+.section-bg-solid {
+  background-color: #e8eae9;
+}
+.section-bg-white {
+  background-color: #fff;
+}
+
+/* Vertical line between sections */
+.section-divider-vertical {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 1px;
+  height: 60px;
+  background-color: var(--color-accent);
+  margin: 0 auto 1.5rem;
+  border: none;
+  padding: 0;
+  display: block;
+}
+
+/* Half-and-half: full-width centered title, then two columns */
+.half-and-half {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 0;
+}
+.half-and-half__title-wrap {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.half-and-half__heading {
+  font-family: var(--font-display);
+  font-size: 52px;
+  line-height: 1.1;
+  margin: 0;
+  font-weight: 400;
+}
+.half-and-half__title-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  max-height: 4rem;
+  object-fit: contain;
+}
+.half-and-half__subheading {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  font-size: 1.75rem;
+  margin: 0;
+  font-weight: 600;
+}
+.half-and-half__media,
+.half-and-half__content {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+.half-and-half__media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.half-and-half__image {
+  width: 100%;
+  height: auto;
+}
+.half-and-half__video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  vertical-align: middle;
+}
+.half-and-half__body {
+  margin-bottom: 1.25rem;
+}
+.half-and-half__body p {
+  margin: 0 0 0.75rem;
+}
+.half-and-half__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile: image on top when mobileImageFirst is set (e.g. for imagePosition="right") */
+@media (max-width: 767px) {
+  .half-and-half.half-and-half--mobile-image-first .half-and-half__media {
+    order: 0 !important;
+  }
+  .half-and-half.half-and-half--mobile-image-first .half-and-half__content {
+    order: 1 !important;
+  }
+}
+
+/* Signup section: content aligned end on desktop, center on mobile */
+@media (min-width: 768px) {
+  .half-and-half--signup .half-and-half__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 767px) {
+  .half-and-half--signup .half-and-half__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .half-and-half {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    padding: 3rem 0;
+  }
+  .half-and-half__title-wrap {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+  .half-and-half__media,
+  .half-and-half__content {
+    flex: none;
+  }
+}
+
+/* Centered CTA section */
+.centered-cta {
+  text-align: center;
+  margin: 0;
+  padding: 2.5rem 0;
+}
+.centered-cta__title-wrap {
+  margin-bottom: 1rem;
+}
+.centered-cta__heading {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  margin: 0;
+  font-weight: 400;
+}
+.centered-cta.centered-cta--green .centered-cta__heading {
+  color: var(--color-accent-green);
+}
+.centered-cta__body {
+  max-width: 36em;
+  margin: 0 auto 1.25rem;
+}
+.centered-cta__body p {
+  margin: 0 0 0.5rem;
+}
+
+/* Sign-up form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 20rem;
+}
+.signup-form__label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.signup-form__input {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.signup-form__submit {
+  margin-top: 0.25rem;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  font-size: 0.9rem;
+  justify-content: center;
+}
+.social-icons__link {
+  text-decoration: none;
+  font-weight: 600;
+}
+.social-icons__link:hover {
+  text-decoration: underline;
+}
+
+/* Header / footer */
+.site-header {
+  background: url("/images/social-icons-background-pattern-box.jpg");
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+.site-footer {
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+.site-footer .social-icons {
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+/* Legacy horizontal section divider (replaced by vertical) */
+.section-divider {
+  height: 0;
+  margin: 0;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+}
