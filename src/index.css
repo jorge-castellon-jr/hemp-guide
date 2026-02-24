@@ -3,7 +3,7 @@
   --color-accent-green: #2d5a27;
   --color-text: #1a1a1a;
   --color-text-muted: #444;
-  --max-width: 1200px;
+  --max-width: 1000px;
   --breakpoint-md: 768px;
   --font-display: "Bodoni Moda", serif;
   --font-heading: "Roboto", sans-serif;
@@ -80,9 +80,14 @@ body {
   font-size: 1rem;
   font-family: inherit;
   transition: opacity 0.2s;
+  text-transform: uppercase;
 }
 .cta-button:hover {
   opacity: 0.9;
+}
+.cta-button__caret {
+  font-size: 0.75em;
+  margin-left: 0.25em;
 }
 
 /* Section background colors (from reference) */

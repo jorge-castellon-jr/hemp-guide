@@ -99,6 +99,7 @@ export function HalfAndHalfVideo({
           {ctaLabel && ctaHref && (
             <a href={ctaHref} className="cta-button">
               {ctaLabel}
+              <span className="cta-button__caret" aria-hidden="true"> ▶</span>
             </a>
           )}
         </div>

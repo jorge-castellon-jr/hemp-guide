@@ -26,7 +26,7 @@ function App() {
               mobileImageFirst
               imageSrc="/images/Matthew-Harmon-Making-a-Billion-Dollars-from-Hemp-1W.png"
               imageAlt="Book cover: Making a Billion Dollars from HEMP by Matthew Harmon"
-              ctaLabel="GET NOW >"
+              ctaLabel="GET NOW"
               ctaHref="#"
             >
               <h3 className="half-and-half__subheading">Opportunity</h3>
@@ -123,7 +123,7 @@ function App() {
             <CenteredCallToAction
               titleImageSrc={images.farmbridgeLogo}
               titleImageAlt="Farmbridge"
-              ctaLabel="VISIT FARMBRIDGE >"
+              ctaLabel="VISIT FARMBRIDGE"
               ctaHref="#"
               variant="green"
             >

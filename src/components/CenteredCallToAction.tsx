@@ -45,6 +45,7 @@ export function CenteredCallToAction({
         <div className="centered-cta__body">{children}</div>
         <a href={ctaHref} className="cta-button">
           {ctaLabel}
+          <span className="cta-button__caret" aria-hidden="true"> ▶</span>
         </a>
       </section>
     </>
