@@ -1,18 +1,22 @@
 "use client";
 
 import { type FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export interface SignUpFormProps {
   submitLabel?: string;
   onSubmit?: (data: { name: string; email: string }) => void;
 }
 
-type SubmitStatus = "idle" | "loading" | "success" | "error";
+type SubmitStatus = "idle" | "loading" | "error";
+
+const FREEVIEW_THANK_YOU_PATH = "/freeview-thank-you";
 
 export function SignUpForm({
   submitLabel = "Send my preview now",
   onSubmit,
 }: SignUpFormProps) {
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<SubmitStatus>("idle");
@@ -38,7 +42,7 @@ export function SignUpForm({
         setErrorMessage((data.error as string) || "Something went wrong.");
         return;
       }
-      setStatus("success");
+      router.push(FREEVIEW_THANK_YOU_PATH);
     } catch {
       setStatus("error");
       setErrorMessage("Network error. Please try again.");
@@ -81,11 +85,6 @@ export function SignUpForm({
       >
         {status === "loading" ? "Sending…" : submitLabel}
       </button>
-      {status === "success" && (
-        <p className="signup-form__message signup-form__message--success">
-          Thanks! Check your email for your preview.
-        </p>
-      )}
       {status === "error" && errorMessage && (
         <p className="signup-form__message signup-form__message--error">
           {errorMessage}
