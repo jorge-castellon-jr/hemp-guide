@@ -22,7 +22,9 @@ export default function FreeviewThankYouPage() {
         <div className="section-bg-hero">
           <div className="page-container">
             <div className="page-title-wrap">
-              <h1 className="page-title">Thank you for requesting a free PREVIEW</h1>
+              <h1 className="page-title">
+                Thank you for requesting a free PREVIEW
+              </h1>
               <div className="title-underline" aria-hidden="true" />
             </div>
 
@@ -46,20 +48,29 @@ export default function FreeviewThankYouPage() {
                 </a>
               </div>
               <div className="half-and-half__content">
-                <h2 className="half-and-half__subheading" style={{ marginBottom: "1rem" }}>
+                <h2
+                  className="half-and-half__subheading"
+                  style={{ marginBottom: "1rem" }}
+                >
                   The Next Disruptive Industry
                 </h2>
                 <p>
                   There's a proven product poised for billions of dollars in
-                  growth—and you can get in on the ground floor. Industrial hemp,
-                  now legal, is the crop of the future, the savior of the economy,
-                  and your ticket to wealth. Tap into this emerging industry with{" "}
-                  <i>Marijuana Hater's Guide to Making a Billion Dollars from Hemp</i>.
+                  growth—and you can get in on the ground floor. Industrial
+                  hemp, now legal, is the crop of the future, the savior of the
+                  economy, and your ticket to wealth. Tap into this emerging
+                  industry with{" "}
+                  <i>
+                    Marijuana Hater's Guide to Making a Billion Dollars from
+                    Hemp
+                  </i>
+                  .
                 </p>
                 <p>
-                  This book is your roadmap to tapping into hemp's vast potential
-                  to create a sustainable permaculture that transforms our economy
-                  and protects our environment—while making you rich.
+                  This book is your roadmap to tapping into hemp's vast
+                  potential to create a sustainable permaculture that transforms
+                  our economy and protects our environment—while making you
+                  rich.
                 </p>
                 <a
                   href={PREVIEW_PDF}
