@@ -21,7 +21,7 @@ export default function HomePage() {
             </div>
             <HalfAndHalf
               imagePosition="right"
-              imageWidth="500px"
+              imageWidth="400px"
               mobileImageFirst
               imageSrc="/images/Matthew-Harmon-Making-a-Billion-Dollars-from-Hemp-1W.png"
               imageAlt="Book cover: Making a Billion Dollars from HEMP by Matthew Harmon"
