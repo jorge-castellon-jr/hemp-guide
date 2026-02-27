@@ -91,6 +91,7 @@ export default function RootLayout({
   return (
     <html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
       <head>
+        <script src="https://t.contentsquare.net/uxa/e7cb6b760fc2c.js" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
