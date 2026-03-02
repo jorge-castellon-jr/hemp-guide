@@ -17,10 +17,10 @@ export const socialLinks: SocialLink[] = [
 
 /** Images downloaded from reference index.html (hempguide.com) */
 export const images = {
-  book: "https://imagedelivery.net/URnbvRge7GJDOWQUm8qabA/989ba760-fe9d-4158-f9a6-6d9e2f8b7300/public",
+  book: "https://imagedelivery.net/URnbvRge7GJDOWQUm8qabA/de553040-6f34-4688-bc47-f99dc6532900/public",
   hemp: "https://imagedelivery.net/URnbvRge7GJDOWQUm8qabA/b74b6eb2-864a-4ed8-4a25-d1cd93fa1100/public",
   matthew:
-    "https://imagedelivery.net/URnbvRge7GJDOWQUm8qabA/d87549ab-a931-4034-8063-833499e28900/public",
+    "https://imagedelivery.net/URnbvRge7GJDOWQUm8qabA/70ddca76-6257-4814-44e5-af123b070700/public",
   farmbridgeLogo:
     "https://imagedelivery.net/URnbvRge7GJDOWQUm8qabA/a06dbc67-cdff-42e8-f128-1097e19d7200/public",
 } as const;
